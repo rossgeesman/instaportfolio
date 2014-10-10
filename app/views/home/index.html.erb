@@ -1,0 +1,11 @@
+<% if session[:access_token] %>
+
+<%= button_to "Create Averaged Image", :action=>"create", :controller=>"imagesets" %>
+
+<%= link_to "Sign Out", :action => "destroy", :controller => "authentications" %>
+
+<% else %>
+
+<%= link_to "Sign-in with Instagram", authentications_new_path %>
+
+<% end %>
