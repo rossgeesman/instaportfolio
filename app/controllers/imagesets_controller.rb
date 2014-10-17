@@ -14,13 +14,22 @@ class ImagesetsController < ApplicationController
  
   def create
   	@imageset = Imageset.new
-
+    @imageset.save
+    Delayed::Job.enqueue ImagesetJob.new(:access_token => session[:access_token], :id => @imageset.id)
       if @imageset.save
-        @imageset.delay.save_averaged_image(session)
         redirect_to @imageset
       else
         redirect_to root_url
       end
+  end
+
+  def processing
+    @imageset = Imageset.find(params[:id])
+    if @imageset.averaged_image_file_size.nil?
+      render :json => 1
+    else
+      render :json => 0
+    end
   end
   
 

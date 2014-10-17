@@ -40,6 +40,9 @@ gem 'rmagick'
 
 gem 'delayed_job_active_record'
 
+gem 'pry-rails', :group => :development
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

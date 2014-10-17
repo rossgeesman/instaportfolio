@@ -9,10 +9,9 @@ class Imageset < ActiveRecord::Base
   def save_averaged_image(session)
     @instagram = Instagram.user_recent_media(:access_token => session[:access_token])
   	@recent_media = ImageList.new
-	@instagram.each do |instagram| 
-	  @recent_media.read(instagram.images.standard_resolution.url)
-	end
-
+	  @instagram.each do |instagram| 
+	    @recent_media.read(instagram.images.standard_resolution.url)
+	  end
   	averaged = @recent_media.average
   	contrastified = averaged.contrast_stretch_channel('3%')
     file = Tempfile.new('averaged_temp')

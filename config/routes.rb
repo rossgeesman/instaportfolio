@@ -3,6 +3,8 @@ Instaportfolio::Application.routes.draw do
 
   resources :imagesets
 
+  get "/imagesets/processing/:id", to: "imagesets#processing"
+
   get "/authentications/new", to: "authentications#new"
 
   get "/authentications/callback", to: "authentications#create"
