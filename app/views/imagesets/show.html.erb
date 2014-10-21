@@ -1,3 +1,1 @@
-<%= image_tag (asset_path "spiffygif_134x134.gif") %>
-<%= image_tag @imageset.averaged_image.url(:standard) %>
-<%= @imageset.averaged_image_file_size %>
+<span id="image"><%= image_tag @imageset.averaged_image.url(:standard), :id => "averaged-image" %></span>

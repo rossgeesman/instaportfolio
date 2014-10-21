@@ -31,8 +31,11 @@ class ImagesetsController < ApplicationController
       render :json => 0
     end
   end
-  
 
+  def processed_image
+    @imageset = Imageset.find(params[:id])
+    render :json => @imageset.averaged_image.url(:standard)
+  end
 
   def imageset_params
     params.require(:imageset).permit(:averaged_image, :imageset)

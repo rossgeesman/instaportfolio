@@ -5,6 +5,8 @@ Instaportfolio::Application.routes.draw do
 
   get "/imagesets/processing/:id", to: "imagesets#processing"
 
+  get "/imagesets/processed_image/:id", to: "imagesets#processed_image"
+
   get "/authentications/new", to: "authentications#new"
 
   get "/authentications/callback", to: "authentications#create"

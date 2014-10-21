@@ -13,7 +13,10 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+/tmp/
 
 # Ignore Instagram initializer.
 /config/initializers/instagram.rb
+
+# Ignore system folder
+/public/system/
