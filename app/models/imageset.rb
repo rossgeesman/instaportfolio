@@ -1,6 +1,5 @@
 class Imageset < ActiveRecord::Base
-	require 'RMagick'
-	include Magick
+
 
 	has_attached_file :averaged_image, styles: { standard: '640x640>' }, :default_url => "/assets/spiffygif_134x134.gif"
 	validates_attachment_content_type :averaged_image, :content_type => /\Aimage\/.*\Z/

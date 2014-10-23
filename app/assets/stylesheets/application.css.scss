@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+$navbar-default-bg: #CCCCB2;
+$body-bg: #CCCCB2;
+$text-color: #FFF;
+$link-color: #666659;
+$navbar-default-border: none;
+@import "bootstrap";
+@import "bootstrap-sprockets";
+

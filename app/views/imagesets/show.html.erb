@@ -1,1 +1,3 @@
+<%= javascript_include_tag params[:controller] %>
 <span id="image"><%= image_tag @imageset.averaged_image.url(:standard), :id => "averaged-image" %></span>
+<%= facebook_button %> <%= twitter_button %>

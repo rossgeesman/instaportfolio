@@ -1,3 +1,4 @@
+<h1>Who am I?</h1>
 <% if session[:access_token] %>
 
 <%= button_to "Create Averaged Image", :action=>"create", :controller=>"imagesets" %>
@@ -6,6 +7,6 @@
 
 <% else %>
 
-<%= link_to "Sign-in with Instagram", authentications_new_path %>
+<%= link_to "Sign-in with Instagram to find out.", authentications_new_path, :class => "btn btn-default" %>
 
 <% end %>

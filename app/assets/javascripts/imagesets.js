@@ -26,7 +26,7 @@ function poll() {
 	}
 }
 
-var interval = window.setInterval(poll, 3000);
+var interval = window.setInterval(poll, 15000);
 
 
 
