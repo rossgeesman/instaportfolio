@@ -15,8 +15,7 @@
 /log/*.log
 /tmp/
 
-# Ignore Instagram initializer.
-/config/initializers/instagram.rb
+
 
 # Ignore system folder
 /public/system/
