@@ -29,4 +29,3 @@ function poll() {
 var interval = window.setInterval(poll, 15000);
 
 
-

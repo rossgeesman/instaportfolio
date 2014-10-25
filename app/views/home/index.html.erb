@@ -1,12 +1,19 @@
-<h1>Who am I?</h1>
+
+<div class="row">
+  <div class="centered">
+    <h1>You are the average of your last 20 Instagram photos.</h1>
+
 <% if session[:access_token] %>
 
-<%= button_to "Create Averaged Image", :action=>"create", :controller=>"imagesets" %>
+<%= button_to "Create Averaged Image", {:action=>"create", :controller=>"imagesets"}, {:class => "btn btn-default btn-lg create-avg-btn"} %>
 
 <%= link_to "Sign Out", :action => "destroy", :controller => "authentications" %>
 
 <% else %>
 
-<%= link_to "Sign-in with Instagram to find out.", authentications_new_path, :class => "btn btn-default" %>
+<%= link_to "Sign-in with Instagram", authentications_new_path, :class => "btn btn-default btn-lg create-avg-btn" %>
+<%= link_to "View the Gallery", imagesets_path, :class => "btn btn-default btn-lg create-avg-btn" %>
 
 <% end %>
+  </div>
+</div>

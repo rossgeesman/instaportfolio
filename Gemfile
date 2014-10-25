@@ -48,6 +48,10 @@ gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'autoprefixer-rails'
 
+gem 'pg', '0.15.1'
+
+gem 'rails_12factor', group: :production
+
 
 
 # Use ActiveModel has_secure_password
