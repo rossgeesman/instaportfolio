@@ -49,6 +49,8 @@ gem 'pg', '0.15.1'
 
 gem 'rails_12factor', group: :production
 
+gem 'aws-sdk', '~> 1.0'
+
 
 
 # Use ActiveModel has_secure_password
