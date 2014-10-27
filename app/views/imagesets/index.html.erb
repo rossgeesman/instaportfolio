@@ -1,3 +1,12 @@
-<% @imagesets.each do |imageset| %>
-<%= image_tag imageset.averaged_image.url(:standard) %>
-<% end %>
+
+<% @imagesets.in_groups_of(2, false).each do |group| %>
+  <div class="row">
+  	<% group.each do |imageset| %>
+  	  <div class="col-md-6">
+  	  	<div class="center-block">
+	        <img src=<%= imageset.averaged_image.url(:standard) %> class="center-block img-responsive">
+	    </div>
+	  </div>
+    <% end %>
+  </div>
+  <% end %>

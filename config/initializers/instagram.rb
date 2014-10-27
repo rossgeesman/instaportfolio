@@ -7,4 +7,4 @@ Instagram.configure do |config|
   #config.client_ips = '<Comma separated list of IPs>'
 end
 
-CALLBACK_URL = "http://www.whoami.prettymuchallofthetime.com/authentications/callback"
+CALLBACK_URL = ENV["CALLBACK_URL"]
