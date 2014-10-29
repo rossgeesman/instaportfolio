@@ -1,7 +1,7 @@
 class Imageset < ActiveRecord::Base
 
 
-	has_attached_file :averaged_image, styles: { standard: '640x640>' }, :default_url => "/assets/spinner.gif"
+	has_attached_file :averaged_image, styles: { standard: '640x640>', small: '300x300>' }, :default_url => "/assets/spinner.gif"
 	validates_attachment_content_type :averaged_image, :content_type => /\Aimage\/.*\Z/
 	
 
