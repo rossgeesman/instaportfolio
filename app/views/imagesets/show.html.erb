@@ -2,6 +2,7 @@
 <div class="row">
   <div class="col-md-12">
     <div class="center-block">
+    	<div class="alert alert-info" id="alert-box" style="display:none;" role="alert">Processing your image. This might take up to 30 seconds.</div>
     	<div class="img-bg">
       <%= image_tag @imageset.averaged_image.url(:standard), :id => "averaged-image", :class => "img-responsive" %>
         </div>

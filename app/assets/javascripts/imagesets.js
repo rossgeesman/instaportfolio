@@ -18,14 +18,15 @@ img.src = url
 
 function poll() {
 	if ( Get("/imagesets/processing/" + currentURL) == 1 ) {
-		console.log("Not done yet");
+		document.getElementById('alert-box').style.display='block';
 	} else {
 		var processedIMGurl = Get("/imagesets/processed_image/" + currentURL)
-		reload(processedIMGurl)
+		reload(processedIMGurl);
+		document.getElementById('alert-box').style.display='none';
 		clearInterval(interval);
 	}
 }
 
-var interval = window.setInterval(poll, 15000);
+var interval = window.setInterval(poll, 5000);
 
 
